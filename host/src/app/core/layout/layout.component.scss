@@ -1,0 +1,31 @@
+:host {
+    display: block;
+    display: grid;
+    height: 100%;
+    grid-template-columns: auto 3fr;
+    grid-template-rows: auto 3fr;
+  
+    position: relative;
+    grid-template-areas:
+      "header header header"
+      "side-nav products products";
+  }
+  mf-side-nav {
+    grid-area: side-nav;
+  
+    display: block;
+    // height: 100%;
+  }
+  
+  app-header {
+    grid-area: header;
+    display: block;
+    border-bottom: 1px solid #fff;
+  }
+  
+  main{
+      grid-area: products;
+      padding: 1rem 1rem;
+  
+  }
+  
