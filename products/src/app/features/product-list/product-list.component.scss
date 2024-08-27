@@ -1,0 +1,92 @@
+h1 {
+    color: #00308f;
+    text-align: center;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .products {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product {
+    cursor: pointer;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 250px;
+    flex-shrink: 0;
+  
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+  
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      flex: 1;
+    }
+  
+    &__image {
+      height: 125px;
+      width: 125px;
+    }
+  
+    h4,
+    p {
+      text-align: center;
+    }
+  
+    &__button {
+      background-color: #00308f;
+      color: #fff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.75rem;
+      cursor: pointer;
+      width: 150px;
+      transition:all 0.5s;
+      position: relative;
+  
+      svg {
+        opacity: 0;
+        width: 0;
+        transition: 0.5s;
+        position: absolute;
+        right: -40px;
+  
+      }
+  
+      &:hover {
+        svg {
+          opacity: 1;
+          width: auto;
+          right: 10px ;
+          bottom: 10px;
+  
+        }
+      }
+    }
+  
+    &__footer {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  

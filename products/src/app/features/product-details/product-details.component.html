@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="product-details">
+    <button class="product-button" (click)="back()">
+      back to product list
+    </button>
+
+    <img [src]="product?.image" alt="Imagem do Produto" />
+    <h2>{{ product?.name }}</h2>
+    <p><strong>Preço:</strong> {{ product?.price | currency : "BRL" }}</p>
+    <p><strong>Descrição:</strong> {{ product?.description }}</p>
+    <p><strong>Especificações:</strong></p>
+    <ul>
+      <li>Marca: XYZ</li>
+      <li>Modelo: ABC123</li>
+      <li>Conectividade: USB</li>
+      <li>Compatibilidade: Windows, Mac, Linux</li>
+    </ul>
+
+    <button
+      class="product-button product-add-to-cart"
+      (click)="addToCart(product)"
+    >
+      Add to Cart
+    </button>
+  </div>
+</div>
